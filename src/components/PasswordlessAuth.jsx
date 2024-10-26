@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 const encodeBase64 = (arrayBuffer) => btoa(String.fromCharCode(...new Uint8Array(arrayBuffer)));
 
 const decodeBase64 = (base64) => Uint8Array.from(atob(base64), (char) => char.charCodeAt(0));
@@ -10,6 +11,11 @@ const generateChallenge = (length) => {
 };
 
 const PasswordlessAuth = () => {
+    useEffect(() => {
+        navigator.bluetooth.getAvailability().then((available) => {
+            if (!available) alert("Bluetooth not available on this device.");
+        });
+    }, []);
     const registerUser = async () => {
         const publicKeyOptions = {
             challenge: generateChallenge(32),
