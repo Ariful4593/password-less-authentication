@@ -1,0 +1,21 @@
+{
+    "name": "password-less-authentication",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "peerDependencies": {
+        "react": "^16.0.0 || ^17.0.0 || ^18.0.0",
+        "react-dom": "^16.0.0 || ^17.0.0 || ^18.0.0"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-react-swc": "^3.7.1",
+        "react": "^16.0.0 || ^17.0.0 || ^18.0.0",
+        "react-dom": "^16.0.0 || ^17.0.0 || ^18.0.0",
+        "vite": "^5.4.1"
+    }
+}
