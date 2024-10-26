@@ -16,36 +16,10 @@ This project demonstrates how to implement **passwordless authentication** in a 
 ---
 
 ## **Prerequisites**
-1. **HTTPS**: WebAuthn works only on secure contexts (HTTPS). Use tools like **ngrok** to expose `localhost` for mobile testing.
+1. **HTTPS**: WebAuthn works only on secure contexts (HTTPS). Use tools like **ngrok** or **Forwarded Port** to expose `localhost` for mobile testing.
 2. **Modern Browser**: Ensure you are using a browser that supports WebAuthn (e.g., Chrome, Firefox).
 3. **Same Device Registration and Sign-in**: Credentials are typically device-bound, so register and sign in on the same device.
 
----
-
-## **Project Setup**
-
-1. Clone the repository:
-   ```bash
-   git clone <your-repository-url>
-   cd <your-project-folder>
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Start the development server:
-   ```bash
-   npm start
-   ```
-
-4. Expose localhost for mobile testing (optional):
-   ```bash
-   npx ngrok http 3000
-   ```
-
----
 
 ## **How It Works**
 
@@ -179,20 +153,6 @@ return (
 );
 ```
 - **UI Layout**: A simple interface with two buttons for **Register** and **Sign In**.
-
----
-
-## **Troubleshooting Tips**
-1. **HTTPS Requirement**: Use **ngrok** to expose your localhost over HTTPS.
-2. **Credential Errors**: Ensure the same device is used for both registration and login to avoid credential issues.
-3. **Check Browser Support**: Verify that your browser supports **WebAuthn**.
-4. **Use Developer Tools**: Open your browser's DevTools to check for console errors and verify **localStorage** entries.
-
----
-
-## **License**
-This project is licensed under the **MIT License**.
-
 ---
 
 ## **Conclusion**
